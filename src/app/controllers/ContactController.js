@@ -8,7 +8,15 @@ class ContactController {
   }
 
   // obtem 1 registro
-  show() {
+  async show(request, response) {
+    const { id } = request.params;
+    const contact = await ContactsRepository.findById(id);
+
+    if (!contact) {
+      return response.status(404).json({ error: 'User not found!' });
+    }
+
+    response.json(contact);
   }
 
   // cria 1 registro
@@ -20,7 +28,16 @@ class ContactController {
   }
 
   // deleta 1 registro
-  delete() {
+  async delete(request, response) {
+    const { id } = request.params;
+    const contact = await ContactsRepository.findById(id);
+
+    if (!contact) {
+      return response.status(404).json({ error: 'User uninformed!' });
+    }
+
+    await ContactsRepository.delete(id);
+    response.sendStatus(204);
   }
 }
 

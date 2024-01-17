@@ -25,5 +25,7 @@ module.exports = {
     'no-console': 'off',
     'class-methods-use-this': 'off',
     'no-unused-vars': 'off',
+    'consistent-return': 'off',
+    'no-promise-executor-return': 'off',
   },
 };
