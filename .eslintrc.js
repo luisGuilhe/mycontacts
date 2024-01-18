@@ -29,5 +29,6 @@ module.exports = {
     'no-promise-executor-return': 'off',
     camelcase: 'off',
     'object-curly-newline': 'off',
+    'linebreak-style': 'off',
   },
 };
