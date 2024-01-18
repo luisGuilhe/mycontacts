@@ -27,5 +27,7 @@ module.exports = {
     'no-unused-vars': 'off',
     'consistent-return': 'off',
     'no-promise-executor-return': 'off',
+    camelcase: 'off',
+    'object-curly-newline': 'off',
   },
 };
